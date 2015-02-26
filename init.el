@@ -46,8 +46,10 @@
 ;; C-kで行全体を削除
 (setq kill-whole-line t)
 
-;; ファイル名の補完で大文字小文字を区別しない
-(setq completion-ignore-case t)
+;; バッファー名の問い合わせで大文字小文字の区別をしない
+(setq read-buffer-completion-ignore-case t)
+;; ファイル名の問い合わせで大文字小文字の区別をしない
+(setq read-file-name-completion-ignore-case t)
 
 ;; バッファの自動再読み込み
 (global-auto-revert-mode 1)
@@ -155,7 +157,9 @@
 ;;; 編集モードとテンプレート等々
 ;;;--------------------------------------------------------------------------
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
-
+(add-to-list 'auto-mode-alist '("\\.p[lm]$" . cperl-mode))
+(add-to-list 'interpreter-mode-alist '("perl" . cperl-mode))
+(defalias 'perl-mode 'cperl-mode)
 
 
 ;;;--------------------------------------------------------------------------
@@ -191,15 +195,28 @@
 ;;;--------------------------------------------------------------------------
 ;;; 追加pluginの設定
 ;;;--------------------------------------------------------------------------
-(add-to-list 'load-path "~/.emacs.d/elisp/")
 (add-to-list 'load-path "~/.emacs.d/elpa/")
+(add-to-list 'load-path "~/.emacs.d/auto-install")
 
-;; elispの予約後に色付け
+;; auto-install
+(add-to-list 'load-path "~/.emacs.d/elisp")
+(require 'auto-install)
+(setq auto-install-direcroty "~/.emacs.d/elisp/")
+
+;; Elispの予約後に色付け
 (require 'elisp-color)
 
 ;; auto-complete
 (require 'auto-complete)
 (global-auto-complete-mode t)
+
+;; perl-completion
+(require 'perl-completion)
+(add-hook 'cperl-mode-hook (lambda ()
+                             (require 'perl-completion)
+                             (add-to-list 'ac-sources 'ac-source-perl-completion)
+                             (perl-completion-mode t)))
+
 
 ;; rainbow-delimiters-mode
 (defun my-rainbow-delimiters-mode-turn-on ()
@@ -212,10 +229,33 @@
 (add-hook 'css-mode-hook 'my-rainbow-mode-turn-on)
 (add-hook 'html-mode-hook 'my-rainbow-mode-turn-on)
 
+;; volatile-highlight
+;; (require 'volatile-highlight)
+;; (volatile-highlight 1 10)
+
+;; anzu
+(require 'anzu)
+(global-anzu-mode +1)
+(custom-set-variables
+ '(anzu-mode-lighter "")
+ '(anzu-deactivate-region t)
+ '(anzu-search-threshold 1000))
+
 ;; undo-tree
 (require 'undo-tree)
 (global-undo-tree-mode t)
 (global-set-key (kbd "M-/") 'undo-tree-redo)
+
+;; quickrun
+(require 'quickrun)
+;; 結果の出力バッファと元のバッファを行き来したいので
+;; ':stick t'の設定をする
+;; (push '("*quickrun*") popwin:special-display-config)
+;; よく使う(と思う)ので F7 キーを割り当てる
+(global-set-key (kbd "<f7>") 'quickrun)
+
+;; perl-completion
+;; (require 'perl-completion)
 
 ;; twittering-mode
 (require 'twittering-mode nil t)

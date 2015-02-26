@@ -1905,9 +1905,6 @@
  (memoize .
 	  [(1 0 1)
 	   nil "Memoization functions" single])
- (melpa-repository .
-		   [(0 0 5)
-		    nil "add the melpa elpa repository to emacs" single])
  (mediawiki .
 	    [(2 2 3)
 	     nil "mediawiki frontend" single])

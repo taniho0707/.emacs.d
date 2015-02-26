@@ -1,4 +1,6 @@
-((("my-rainbow-mode-turn-on" .
+((("use" .
+   [1 0 0])
+  ("my-rainbow-mode-turn-on" .
    [0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
   ("rainbow-mode" .
    [0 0 0 1 0 0 0 0 0 0 0 0])
@@ -31,4 +33,8 @@
   ("global-set-key" .
    [0 0 0 0 0 0 0 0 0 0 1 0 0 0])
   ("kbd" .
+   [1 0 0])
+  ("print" .
+   [2 0 0 0 0])
+  ("sub" .
    [1 0 0])))
