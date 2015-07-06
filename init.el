@@ -160,6 +160,35 @@
 (add-to-list 'auto-mode-alist '("\\.p[lm]$" . cperl-mode))
 (add-to-list 'interpreter-mode-alist '("perl" . cperl-mode))
 (defalias 'perl-mode 'cperl-mode)
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+
+(require 'autoinsert)
+(setq auto-insert-alist
+      (nconc '(
+               ("\\.cpp$" . ["template.cpp" my-template])
+               ("\\.hpp$" . ["template.hpp" my-template])
+               ("\\.tex$" . ["template.tex" my-template])
+               ("\\.pl$" . ["template.pl" my-template])
+               ("\\.c$" . ["template.c" my-template])
+               ("\\.h$" . ["template.h" my-template])
+               ) auto-insert-alist))
+
+;; ファイルごとの自動生成部
+(defvar template-replacements-alists
+  '(("%file%" . (lambda () (file-name-nondirectory (buffer-file-name))))
+    ("%file-without-ext%" . (lambda () (file-name-sans-extension (file-name-nondirectory (buffer-file-name)))))
+    ("%include-guard%" . (lambda () (format "__INCLUDED_%s_H__" (upcase (file-name-sans-extension (file-name-nondirectory buffer-file-name))))))))
+
+(defun my-template ()
+  (time-stamp)
+  (mapc #'(lambda(c)
+            (progn
+              (goto-char (point-min))
+              (replace-string (car c) (funcall (cdr c)) nil)))
+        template-replacements-alists)
+  (goto-char (point-max))
+  (message "done."))
+(add-hook 'find-file-not-found-hooks 'auto-insert)
 
 
 ;;;--------------------------------------------------------------------------
@@ -176,6 +205,12 @@
 ;; F5 でコンパイル
 (global-set-key [f5] 'compile)
 (setq compilation-window-height 10)
+
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
+
 
 ;;;--------------------------------------------------------------------------
 ;;; 標準pluginの設定
@@ -209,6 +244,12 @@
 ;; auto-complete
 (require 'auto-complete)
 (global-auto-complete-mode t)
+
+;; auto-complete-latex
+(require 'auto-complete-latex)
+(setq ac-l-source-user-keywords*
+      '("aaa" "bbb" "ccc"))
+(add-to-list 'ac-modes 'tex-mode)
 
 ;; perl-completion
 (require 'perl-completion)

@@ -1,0 +1,74 @@
+% %file%
+\documentclass[a4paper,11pt]{ujarticle}
+\usepackage[margin=3cm]{geometry}
+\usepackage[dviout]{graphicx}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\makeatletter
+\def\mojiparline#1{
+    \newcounter{mpl}
+    \setcounter{mpl}{#1}
+    \@tempdima=\linewidth
+    \advance\@tempdima by-\value{mpl}zw
+    \addtocounter{mpl}{-1}
+    \divide\@tempdima by \value{mpl}
+    \advance\kanjiskip by\@tempdima
+    \advance\parindent by\@tempdima
+}
+\makeatother
+\def\linesparpage#1{
+    \baselineskip=\textheight
+    \divide\baselineskip by #1
+}
+\begin{document}
+%本文
+
+\mojiparline{40}
+\linesparpage{36}
+
+\begin{titlepage}
+\begin{center}
+\vspace*{180truept}
+{\Huge TITLE}\\
+\end{center}
+\end{titlepage}
+
+\section{目的}
+
+
+\section{実験方法}
+\subsection{使用器具}
+
+\subsection{}
+
+
+\section{結果}
+\subsection{}
+
+
+\section{考察}
+\subsection{}
+
+
+\section{結論}
+
+
+\end{document}
+
+
+\begin{table}[ht]
+	\begin{center}
+		\caption{}
+		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|} 
+
+		\end{tabular}
+		\label{tab:}
+	\end{center}
+\end{table}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=15cm]{./image.eps}
+		\caption{}
+	\end{center}
+\end{figure}

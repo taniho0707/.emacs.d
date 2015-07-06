@@ -1,40 +1,50 @@
-((("use" .
-   [1 0 0])
-  ("my-rainbow-mode-turn-on" .
-   [0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("rainbow-mode" .
-   [0 0 0 1 0 0 0 0 0 0 0 0])
-  ("setq" .
-   [0 0 1 0])
-  ("setq-default" .
-   [0 0 0 0 0 1 0 0 0 0 0 0])
-  ("require" .
-   [0 0 0 0 1 1 0])
-  ("auto-complete" .
-   [0 0 0 0 0 1 0 0 0 0 0 0 0])
-  ("add-to-list" .
-   [1 0 0 0 0 0 0 0 0 0 0])
-  ("load-path" .
-   [0 0 0 1 0 0 0 0 0])
-  ("defun" .
-   [1 0 0 0 0])
-  ("rainbow-delimiters-mode" .
-   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("add-hook" .
-   [0 0 0 0 3 0 0 0])
-  ("c-mode" .
-   [0 0 0 0 1 0])
-  ("c-mode-common-hook" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
-  ("my-rainbow-delimiters-mode-turn-on" .
-   [0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
-  ("undo-tree" .
-   [0 0 1 0 0 0 0 0 0])
-  ("global-set-key" .
-   [0 0 0 0 0 0 0 0 0 0 1 0 0 0])
-  ("kbd" .
+((("PerlIO::gzip" .
+   [0 0 0 0 1 0 0 0 0 0 0 0])
+  ("sub" .
    [1 0 0])
   ("print" .
-   [2 0 0 0 0])
-  ("sub" .
-   [1 0 0])))
+   [4 0 0 0 0])
+  ("kbd" .
+   [1 0 0])
+  ("global-set-key" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("undo-tree" .
+   [0 0 1 0 0 0 0 0 0])
+  ("my-rainbow-delimiters-mode-turn-on" .
+   [0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("c-mode-common-hook" .
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("c-mode" .
+   [0 0 0 0 1 0])
+  ("add-hook" .
+   [0 0 0 0 3 0 0 0])
+  ("rainbow-delimiters-mode" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("defun" .
+   [1 0 0 0 0])
+  ("load-path" .
+   [0 0 0 1 0 0 0 0 0])
+  ("add-to-list" .
+   [1 0 0 0 0 0 0 0 0 0 0])
+  ("auto-complete" .
+   [0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("require" .
+   [0 0 0 0 1 1 0])
+  ("setq-default" .
+   [0 0 0 0 0 1 0 0 0 0 0 0])
+  ("setq" .
+   [0 0 1 0])
+  ("rainbow-mode" .
+   [0 0 0 1 0 0 0 0 0 0 0 0])
+  ("my-rainbow-mode-turn-on" .
+   [0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("use" .
+   [1 0 0])
+  ("document" .
+   [0 0 0 0 2 0 0 0])
+  ("begin" .
+   [0 0 0 1 0])
+  ("usepackage" .
+   [0 0 0 0 0 1 0 0 0 0])
+  ("pagestyle" .
+   [0 0 1 0 0 0 0 0 0])))
