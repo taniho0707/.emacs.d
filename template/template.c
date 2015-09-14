@@ -1,8 +1,7 @@
 /*
- * %file% -
+ * 
  */
 
-#include "%file-without-ext%.h"
 #include <stdio.h>
 #include <stdlib.h>
 

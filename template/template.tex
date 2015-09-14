@@ -1,9 +1,10 @@
-% %file%
+%
 \documentclass[a4paper,11pt]{ujarticle}
 \usepackage[margin=3cm]{geometry}
 \usepackage[dviout]{graphicx}
 \usepackage{enumerate}
 \usepackage{amsmath}
+\usepackage{here}
 \makeatletter
 \def\mojiparline#1{
     \newcounter{mpl}
@@ -21,7 +22,7 @@
     \divide\baselineskip by #1
 }
 \begin{document}
-%ËÜÊ¸
+%$BK\J8(B
 
 \mojiparline{40}
 \linesparpage{36}
@@ -33,30 +34,30 @@
 \end{center}
 \end{titlepage}
 
-\section{ÌÜÅª}
+\section{$BL\E*(B}
 
 
-\section{¼Â¸³ÊıË¡}
-\subsection{»ÈÍÑ´ï¶ñ}
+\section{$B<B83J}K!(B}
+\subsection{$B;HMQ4o6q(B}
 
 \subsection{}
 
 
-\section{·ë²Ì}
+\section{$B7k2L(B}
 \subsection{}
 
 
-\section{¹Í»¡}
+\section{$B9M;!(B}
 \subsection{}
 
 
-\section{·ëÏÀ}
+\section{$B7kO@(B}
 
 
 \end{document}
 
 
-\begin{table}[ht]
+\begin{table}[H]
 	\begin{center}
 		\caption{}
 		\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|} 
@@ -66,9 +67,10 @@
 	\end{center}
 \end{table}
 
-\begin{figure}
+\begin{figure}[H]]
 	\begin{center}
-		\includegraphics[width=15cm]{./image.eps}
-		\caption{}
+      \label{fig:}
+	  \includegraphics[width=15cm]{./image.eps}
+	  \caption{}
 	\end{center}
 \end{figure}

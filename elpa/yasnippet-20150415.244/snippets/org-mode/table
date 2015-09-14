@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: table
+# key: table
+# --
+#+CAPTION: $0
+#+NAME: ${1:tab:}
+#+ATTR_LaTeX: ${2::align |r|r|r|r|r|r|r|}
+

@@ -1,0 +1,86 @@
+zsh
+qmake
+qmake -project
+qmake
+make
+make
+make
+ls
+ls -l
+./main.o
+./QtTutorial
+make
+make
+make
+make
+make
+./QtTutorial 
+make
+make
+./QtTutorial 
+make
+./QtTutorial 
+make
+./QtTutorial 
+make
+./QtTutorial 
+make
+./QtTutorial 
+make
+./QtTutorial 
+mak
+make
+./QtTutorial 
+make
+./QtTutorial 
+make
+./QtTutorial 
+make
+make
+./QtTutorial 
+make
+./QtTutorial 
+make
+./QtTutorial 
+make
+./QtTutorial 
+make
+./QtTutorial 
+echo $LANG
+cat あああ
+echo あああ
+gcc -v
+cd ../
+ls
+cd Programs/C/test/
+ls
+cat console.c 
+gcc console.c 
+gcc console.c 
+gcc console.c 
+gcc console.c 
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+cd o
+cd OneDrive/
+ls
+cd ..
+ls
+gnuplot graph.gp 
+ls
+gnuplot graph.gp 
+cat test.png
+gnuplot graph.gp
+cat test.png 
+ls
+gnuplot graph.gp 
+cat test.png
+gnuplot graph.gp
+cat test.png
+gnuplot graph.gp
+cat test.png

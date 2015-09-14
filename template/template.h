@@ -1,9 +1,9 @@
 /*
- * %file% -
+ * 
  */
 
-#ifndef %include-guard%
-#define %include-guard%
+#ifndef 
+#define 
 
 
 
