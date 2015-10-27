@@ -74,3 +74,10 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/elisp/cat-mode"))
 (require 'cat-mode)
 
+
+;; mozc-emacs
+(add-to-list 'load-path "/usr/share/emacs/24.3/site-lisp/emacs-mozc")
+(require 'mozc)
+(setq default-input-method "japanese-mozc")
+;; (global-set-key (kbd "C-\\") 'mozc-mode)
+(global-set-key [muhenkan] 'mozc-mode)
