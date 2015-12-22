@@ -84,3 +84,4 @@ gnuplot graph.gp
 cat test.png
 gnuplot graph.gp
 cat test.png
+exit

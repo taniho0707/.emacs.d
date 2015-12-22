@@ -165,7 +165,9 @@
 
 ;; 言語設定
 (set-coding-system-priority 'utf-8 'euc-jp 'iso-2022-jp 'cp932)
-
+(prefer-coding-system 'utf-8)
+(setq coding-system-for-read 'utf-8)
+(setq coding-system-for-write 'utf-8)
 
 ;;文字コード設定
 (setq default-buffer-file-coding-system 'utf-8-unix)
@@ -271,6 +273,10 @@
 ;; eshellモードでのエンコードを指定
 (setenv "LANG" "ja_JP.UTF-8")
 
+;; SSH経由でファイル操作を可能とする
+;; C-x C-f /ssh:user@hostname#port:.emacs.d/init.el
+(require 'tramp)
+(setq tramp-default-method "ssh")
 
 
 ;; 縦横三分割
