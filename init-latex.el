@@ -1,7 +1,7 @@
 ;; -*- Mode: Emacs-Lisp ; Coding: utf-8 -*-
 
 
-(add-to-list 'load-path "~/.emacs.d/yatex")
+(add-to-list 'load-path "/home/nonoho/.emacs.d/yatex")
 
 
 ;; YaTeX関係

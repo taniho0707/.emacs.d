@@ -9,6 +9,11 @@
 ;;; 標準機能の設定
 ;;;--------------------------------------------------------------
 
+;; Emaceclient
+(require 'server)
+(unless (server-running-p)
+  (server-start))
+
 ;; themeのロード
 ;; dark-laptopをロード
 (load-theme 'dark-laptop t)
@@ -18,7 +23,19 @@
 (setq inhibit-startup-screen t)
 
 ;; 日本語環境の設定
-(set-language-environment "Japanese")
+;(set-language-environment "Japanese")
+;;文字コード設定
+(setq default-buffer-file-coding-system 'utf-8-unix)
+(set-buffer-file-coding-system 'utf-8-unix)
+(set-terminal-coding-system 'utf-8-unix)
+(set-keyboard-coding-system 'utf-8-unix)
+(set-clipboard-coding-system 'utf-8-unix)
+(prefer-coding-system 'utf-8-unix)
+(set-language-environment 'utf-8)
+(set-default-coding-systems 'utf-8-unix)
+(setq locale-coding-system 'utf-8)
+;;dired文字コードの設定
+(setq dired-default-file-coding-system 'utf-8-unix)
 
 ;; TABの表示幅を8から4に変更
 (setq default-tab-width 4)
@@ -169,20 +186,6 @@
 (setq coding-system-for-read 'utf-8)
 (setq coding-system-for-write 'utf-8)
 
-;;文字コード設定
-(setq default-buffer-file-coding-system 'utf-8-unix)
-(set-buffer-file-coding-system 'utf-8-unix)
-(set-terminal-coding-system 'utf-8-unix)
-(set-keyboard-coding-system 'utf-8-unix)
-(set-clipboard-coding-system 'utf-8-unix)
-(prefer-coding-system 'utf-8-unix)
-(set-language-environment 'utf-8)
-(set-default-coding-systems 'utf-8-unix)
-(set-language-environment "Japanese")
-(setq locale-coding-system 'utf-8)
-;;dired文字コードの設定
-(setq dired-default-file-coding-system 'utf-8-unix)
-
 ;; 現在行に色を付ける
 (global-hl-line-mode 1)
 
@@ -194,7 +197,8 @@
 (column-number-mode 1)
 
 ;; "C-m"に newline-and-indent を割り当てる(初期値は newline)
-(define-key global-map (kbd "C-m") 'newline-and-indent)
+;(define-key global-map (kbd "C-m") 'newline-and-indent)
+(define-key global-map (kbd "C-j") 'newline-and-indent)
 
 ;; 大きいファイルを開こうとした時に警告を発生させる
 ;; デフォルトは10MBなので50MBに拡張する
@@ -277,6 +281,22 @@
 ;; C-x C-f /ssh:user@hostname#port:.emacs.d/init.el
 (require 'tramp)
 (setq tramp-default-method "ssh")
+
+
+;; org-mode settings
+(require 'ox-latex)
+;(require 'ox-bibtex)
+;;; LaTeX 形式のファイル PDF に変換するためのコマンド
+(setq org-latex-pdf-process
+      '("uplatex %f"
+        "uplatex %f"
+;        "bibtex %b"
+;        "platex %f"
+;        "platex %f"
+        "dvipdfmx %b.dvi"))
+;;; \hypersetup{...} を出力しない
+(setq org-latex-with-hyperref nil)
+
 
 
 ;; 縦横三分割

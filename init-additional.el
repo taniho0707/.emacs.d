@@ -9,7 +9,7 @@
 
 ;; sense-region
 ;; 短形選択
-;(add-to-list 'load-path "~/.emacs.d/elisp/sense-region")
+;(add-to-list 'load-path "/home/nonoho/.emacs.d/elisp/sense-region")
 ;(require 'sense-region)
 ;(sense-region-on)
 
@@ -71,7 +71,7 @@
 
 
 ;; cat-mode
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/elisp/cat-mode"))
+(add-to-list 'load-path (expand-file-name "/home/nonoho/.emacs.d/elisp/cat-mode"))
 (require 'cat-mode)
 
 

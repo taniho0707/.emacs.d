@@ -10,11 +10,11 @@
 (package-initialize)
 
 
-(add-to-list 'load-path "~/.emacs.d/elpa/")
-(add-to-list 'load-path "~/.emacs.d/auto-install")
+(add-to-list 'load-path "/home/nonoho/.emacs.d/elpa/")
+(add-to-list 'load-path "/home/nonoho/.emacs.d/auto-install")
 
 ;; auto-install
-(add-to-list 'load-path "~/.emacs.d/elisp")
+(add-to-list 'load-path "/home/nonoho/.emacs.d/elisp")
 (require 'auto-install)
-(setq auto-install-direcroty "~/.emacs.d/elisp/")
+(setq auto-install-direcroty "/home/nonoho/.emacs.d/elisp/")
 

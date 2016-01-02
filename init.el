@@ -3,11 +3,11 @@
 
 (setq load-path 
       (append '(
-                "~/.emacs.d"
+                "/home/nonoho/.emacs.d"
                 ) load-path))
 
 ;; 分割ファイルのロード
-(load "init-main")
+(load "init-main.el")
 (load "init-packages")
 (load "init-autoinsert")
 (load "init-anything")

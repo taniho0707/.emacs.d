@@ -5,3 +5,6 @@
 (global-git-gutter-mode t)
 
 
+;; Magit
+(require 'magit)
+
