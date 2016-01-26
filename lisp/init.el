@@ -3,10 +3,6 @@
 
 (setq load-path 
       (append '(
-                "/home/nonoho/.emacs.d"
-                ) load-path))
-(setq load-path 
-      (append '(
                 "/home/nonoho/.emacs.d/lisp"
                 ) load-path))
 
