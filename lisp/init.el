@@ -3,7 +3,7 @@
 
 (setq load-path 
       (append '(
-                "/home/nonoho/.emacs.d"
+                "/home/nonoho/.emacs.d/lisp"
                 ) load-path))
 
 ;; 分割ファイルのロード
