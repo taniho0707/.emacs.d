@@ -5,6 +5,10 @@
       (append '(
                 "/home/nonoho/.emacs.d"
                 ) load-path))
+(setq load-path 
+      (append '(
+                "/home/nonoho/.emacs.d/lisp"
+                ) load-path))
 
 ;; 分割ファイルのロード
 (load "init-main.el")
