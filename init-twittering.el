@@ -3,6 +3,10 @@
 ;; twittering-mode
 (require 'twittering-mode)
 
+
+; ArchLinuxで使えない問題。証明無効にして対処
+(setq twittering-allow-insecure-server-cert t)
+
 ; パスワードをホームディレクトリにgpgで保存
 (setq twittering-use-master-password t)
 (setq twittering-auth-method 'oauth)
