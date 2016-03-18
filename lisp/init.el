@@ -9,6 +9,7 @@
 ;; 分割ファイルのロード
 (load "init-main.el")
 (load "init-packages")
+(load "init-dired")
 (load "init-autoinsert")
 (load "init-anything")
 (load "init-autocomplete")
