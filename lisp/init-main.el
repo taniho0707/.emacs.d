@@ -22,6 +22,9 @@
 ;; スタートアップメッセージ非表示
 (setq inhibit-startup-screen t)
 
+;; ツールバー非表示
+(tool-bar-mode -1)
+
 ;; 日本語環境の設定
 ;(set-language-environment "Japanese")
 ;;文字コード設定
