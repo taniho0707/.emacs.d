@@ -16,6 +16,22 @@
 ;; graphviz
 (add-hook 'graphviz-dot-mode-hook (lambda () (local-set-key [f5] "\C-x\C-s\C-cc\C-m\C-cp")))
 
+;; recentf
+;; http://qiita.com/catatsuy/items/f9fad90fa1352a4d3161
+;; 自動保存
+(when (require 'recentf-ext nil t)
+  (setq recentf-max-saved-items 2000)
+  (setq recentf-exclude '(".recentf"))
+  (setq recentf-auto-cleanup 10)
+  (setq recentf-auto-save-timer (run-with-idle-timer 30 t 'recentf-save-list))
+  (recentf-mode 1))
+;; 起動画面削除
+(setq inhibit-startup-message t)
+;; 起動画面で recentf を開く
+(add-hook 'after-init-hook (lambda()
+    (recentf-open-files)
+    ))
+
 
 ;; rainbow-delimiters-mode
 (defun my-rainbow-delimiters-mode-turn-on ()
@@ -75,17 +91,12 @@
 (require 'cat-mode)
 
 
-;; magit
-; (require 'magit)
-
-
 ;; mozc-emacs
 (add-to-list 'load-path "/usr/share/emacs/24.3/site-lisp/emacs-mozc")
 (require 'mozc)
 (setq default-input-method "japanese-mozc")
 ;; (global-set-key (kbd "C-\\") 'mozc-mode)
 (global-set-key [muhenkan] 'mozc-mode)
-
 
 
 ;; Fix better enum class in C++11
