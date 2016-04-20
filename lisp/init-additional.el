@@ -32,6 +32,12 @@
     (recentf-open-files)
     ))
 
+;; open-junk-file
+;; C-x jでジャンクファイルを作成・開く
+(require 'open-junk-file)
+(setq open-junk-file-format "~/junk/%Y-%m-%d-%H%M%S.")
+(global-set-key (kbd "C-x j") 'open-junk-file)
+
 
 ;; rainbow-delimiters-mode
 (defun my-rainbow-delimiters-mode-turn-on ()
