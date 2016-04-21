@@ -4,8 +4,23 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((gnuplot . t)
+   (R . nil)
    (emacs-lisp . nil)
    ))
+
+(require 'gnuplot-mode)
+
+;; R
+(require 'ess-site)
+(require 'ob-R)
+
+
+;; disable question before execute
+(setq org-confirm-babel-evaluate nil)
+
+;; http://futurismo.biz/archives/2907
+(add-hook 'org-babel-after-execute-hook 'org-display-inline-images)   
+(add-hook 'org-mode-hook 'org-display-inline-images)
 
 
 ;; org-present
