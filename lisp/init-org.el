@@ -1,5 +1,13 @@
 ;; -*- Mode: Emacs-Lisp ; Coding: utf-8 -*-
 
+;; org-babel
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((gnuplot . t)
+   (emacs-lisp . nil)
+   ))
+
+
 ;; org-present
 (require 'org-present)
 (eval-after-load "org-present"
