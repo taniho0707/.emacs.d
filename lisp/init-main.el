@@ -19,6 +19,10 @@
 (load-theme 'dark-laptop t)
 (enable-theme 'dark-laptop)
 
+;; Disable beep tone
+(setq visible-bell t)
+(setq ring-bell-function 'ignore)
+
 ;; スタートアップメッセージ非表示
 (setq inhibit-startup-screen t)
 
