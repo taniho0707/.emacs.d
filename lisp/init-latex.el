@@ -54,49 +54,56 @@
 ; \hypersetup{...} を出力しない
 (setq org-latex-with-hyperref nil)
 
+;; set default image position
+(setq org-latex-default-figure-position "H")
+
+;; don't create title page
+(setq org-latex-title-command nil)
+
 ; Header
 (add-to-list 'org-latex-classes
              '("thesis"
                "\\documentclass[a4paper,11pt]{ujarticle}
-               \\usepackage[margin=3cm]{geometry}
-               \\usepackage[dvipdfmx]{graphicx}
-               \\usepackage{enumerate}
-               \\usepackage{amsmath}
-               \\usepackage{here}
-               \\usepackage{ascmac}
-               \\usepackage{here}
-               \\usepackage{txfonts}
-               \\usepackage{listings}
-               \\renewcommand{\\lstlistingname}{リスト}
-               \\lstset{language=c,
-                 basicstyle=\\ttfamily\\scriptsize,
-                 commentstyle=\\textit,
-                 classoffset=1,
-                 keywordstyle=\\bfseries,
-                 frame=tRBl,
-                 framesep=5pt,
-                 showstringspaces=false,
-                 numbers=left,
-                 stepnumber=1,
-                 numberstyle=\\tiny,
-                 tabsize=2
-               }
-               \\makeatletter
-               \\def\\mojiparline#1{
-                   \\newcounter{mpl}
-                   \\setcounter{mpl}{#1}
-                   \\@tempdima=\\linewidth
-                   \\advance\\@tempdima by-\\value{mpl}zw
-                   \\addtocounter{mpl}{-1}
-                   \\divide\\@tempdima by \\value{mpl}
-                   \\advance\\kanjiskip by\\@tempdima
-                   \\advance\\parindent by\\@tempdima
-               }
-               \\makeatother
-               \\def\\linesparpage#1{
-                   \\baselineskip=\\textheight
-                   \\divide\\baselineskip by #1
-               }"
+\\usepackage[margin=3cm]{geometry}
+\\usepackage[dvipdfmx]{graphicx}
+\\usepackage{enumerate}
+\\usepackage{amsmath}
+\\usepackage{here}
+\\usepackage{ascmac}
+\\usepackage{here}
+\\usepackage{txfonts}
+\\usepackage{listings,jlisting}
+\\usepackage{tikz}
+\\renewcommand{\\lstlistingname}{リスト}
+\\lstset{language=c,
+  basicstyle=\\ttfamily\\scriptsize,
+  commentstyle=\\textit,
+  classoffset=1,
+  keywordstyle=\\bfseries,
+  frame=tRBl,
+  framesep=5pt,
+  showstringspaces=false,
+  numbers=left,
+  stepnumber=1,
+  numberstyle=\\tiny,
+  tabsize=2
+}
+\\makeatletter
+\\def\\mojiparline#1{
+    \\newcounter{mpl}
+    \\setcounter{mpl}{#1}
+    \\@tempdima=\\linewidth
+    \\advance\\@tempdima by-\\value{mpl}zw
+    \\addtocounter{mpl}{-1}
+    \\divide\\@tempdima by \\value{mpl}
+    \\advance\\kanjiskip by\\@tempdima
+    \\advance\\parindent by\\@tempdima
+}
+\\makeatother
+\\def\\linesparpage#1{
+    \\baselineskip=\\textheight
+    \\divide\\baselineskip by #1
+}"
                ("\\section{%s}" . "\\section*{%s}")
                ("\\subsection{%s}" . "\\subsection*{%s}")
                ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
