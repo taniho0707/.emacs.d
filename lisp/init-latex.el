@@ -109,6 +109,9 @@
                ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
                ("\\paragraph{%s}" . "\\paragraph*{%s}")
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-
+(add-to-list 'org-latex-classes
+  '("beamer"
+    "\\documentclass[compress,dvipdfmx]{beamer}"
+    ))
 
 
