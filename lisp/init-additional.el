@@ -16,6 +16,11 @@
 ;; graphviz
 (add-hook 'graphviz-dot-mode-hook (lambda () (local-set-key [f5] "\C-x\C-s\C-cc\C-m\C-cp")))
 
+;; matlab-mode
+(add-hook 'matlab-mode-hook
+  (lambda ()
+    (local-set-key (kbd "C-h") 'backward-delete-char)))
+
 ;; recentf
 ;; http://qiita.com/catatsuy/items/f9fad90fa1352a4d3161
 ;; 自動保存
