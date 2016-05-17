@@ -7,6 +7,11 @@
 ;; Elispの予約後に色付け
 (require 'elisp-color)
 
+;; sync-recentf with multiple emacses
+(require 'sync-recentf)
+(setq recentf-auto-cleanup 60)
+(recentf-mode 1)
+
 ;; sense-region
 ;; 短形選択
 ;(add-to-list 'load-path "/home/nonoho/.emacs.d/elisp/sense-region")
