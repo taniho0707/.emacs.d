@@ -2,7 +2,7 @@
 # name: table
 # key: table
 # --
-#+CAPTION: $0
-#+NAME: ${1:tab:}
-#+ATTR_LaTeX: ${2::align |r|r|r|r|r|r|r|}
-
+#+CAPTION: ${1:}
+#+NAME: tab:${2:}
+#+ATTR_LaTeX: ${3::align |r|r|r|r|r|r|r|}
+$0
