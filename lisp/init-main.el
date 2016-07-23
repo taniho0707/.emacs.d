@@ -250,6 +250,15 @@
 (add-to-list 'auto-mode-alist '("\\.p[lm]$" . cperl-mode))
 (add-to-list 'interpreter-mode-alist '("perl" . cperl-mode))
 (defalias 'perl-mode 'cperl-mode)
+(add-hook 'cperl-mode-hook
+          '(lambda ()
+             (cperl-set-style "PerlStyle")
+             (custom-set-variables
+              '(cperl-indent-parens-as-block t)
+              '(cperl-close-paren-offset -4)
+              'cperl-indent-subs-specially nil))
+          (define-key global-map (kbd "M-p") 'cperl-perldoc)
+          )
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
 
