@@ -1,3 +1,4 @@
+
 ;; -*- Mode: Emacs-Lisp ; Coding: utf-8 -*-
 
 ;; CommonLispの有効化
@@ -173,6 +174,10 @@
 (set-fontset-font
  nil 'japanese-jisx0208
  (font-spec :family "Hiragino Mincho Pro"))
+
+;; フォントサイズの設定
+(set-face-attribute 'default nil
+     :height 110)
 
 ;; メニューバーにファイルのフルパスを表示
 ;; (setq frame-title0format (format "%%f"))
