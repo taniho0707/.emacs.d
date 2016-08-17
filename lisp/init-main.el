@@ -264,6 +264,11 @@
               'cperl-indent-subs-specially nil))
           (define-key global-map (kbd "M-p") 'cperl-perldoc)
           )
+(setq cperl-indent-level 4
+      cperl-close-paren-offset -4
+      cperl-continued-statement-offset 4
+      cperl-indent-parens-as-block t
+      cperl-tab-always-indent t)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
 
