@@ -253,6 +253,7 @@
 ;;;--------------------------------------------------------------------------
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.p[lm]$" . cperl-mode))
+(add-to-list 'auto-mode-alist '("\\.t$" . cperl-mode))
 (add-to-list 'interpreter-mode-alist '("perl" . cperl-mode))
 (defalias 'perl-mode 'cperl-mode)
 (add-hook 'cperl-mode-hook
