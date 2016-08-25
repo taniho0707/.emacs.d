@@ -7,3 +7,6 @@ recentf
 tramp
 url/*
 ede-projects.el
+session.*
+srecode-map.el
+elpa/archives/*
