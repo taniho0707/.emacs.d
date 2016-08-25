@@ -177,7 +177,7 @@
 
 ;; フォントサイズの設定
 (set-face-attribute 'default nil
-     :height 110)
+     :height 105)
 
 ;; メニューバーにファイルのフルパスを表示
 ;; (setq frame-title0format (format "%%f"))

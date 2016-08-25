@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: Data::Dumper
+# key: dump
+# binding: direct-keybinding
+# --
+use Data::Dumper;
+warn Dumper ($1);
