@@ -170,7 +170,8 @@
   (add-to-list 'c-offsets-alist
                '(statement-cont . align-enum-class-closing-brace)))
 
-;; emoji-fontset
-(emoji-fontset-enable "Symbola")
+;; disabled by out-of-date error
+;; ;; emoji-fontset
+;; (emoji-fontset-enable "Symbola")
 
 ; (add-hook 'c++-mode-hook 'fix-enum-class)
