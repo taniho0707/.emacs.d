@@ -76,6 +76,7 @@
 \\usepackage{tikz}
 \\renewcommand{\\lstlistingname}{リスト}
 \\lstset{language=c,
+  breaklines = true,
   basicstyle=\\ttfamily\\scriptsize,
   commentstyle=\\textit,
   classoffset=1,
