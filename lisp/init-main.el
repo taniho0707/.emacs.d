@@ -10,7 +10,7 @@
 ;;; 標準機能の設定
 ;;;--------------------------------------------------------------
 
-;; Emaceclient
+;; Emacsclient
 (require 'server)
 (unless (server-running-p)
   (server-start))
@@ -29,6 +29,7 @@
 
 ;; ツールバー非表示
 (tool-bar-mode -1)
+(menu-bar-mode 0)
 
 ;; 日本語環境の設定
 ;(set-language-environment "Japanese")
