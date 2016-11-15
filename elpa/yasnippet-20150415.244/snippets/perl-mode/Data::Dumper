@@ -1,7 +1,7 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: Data::Dumper
-# key: dump
+# name: Data::Printer
+# key: ddp
 # binding: direct-keybinding
 # --
-use Data::Dumper;
-warn Dumper ($1);
+use DDP { show_unicode => 1, use_prototypes => 0 }; p ($1);
+$0
