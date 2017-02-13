@@ -130,6 +130,10 @@
 (setq web-mode-css-indent-offset 2)
 (setq web-mode-code-indent-offset 2)
 
+;; yaml-mode
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.ya?ml$" . yaml-mode))
+(define-key yaml-mode-map "\C-m" 'newline-and-indent)
 
 ;; cat-mode
 (add-to-list 'load-path (expand-file-name "/home/nonoho/.emacs.d/elisp/cat-mode"))
