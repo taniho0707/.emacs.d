@@ -10,3 +10,7 @@ ede-projects.el
 session.*
 srecode-map.el
 **/elpa/archives/*
+elpa/*
+server/*
+savehist
+recentf.eld

@@ -1,7 +1,0 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: Data::Printer
-# key: ddp
-# binding: direct-keybinding
-# --
-use DDP { show_unicode => 1, use_prototypes => 0 }; p ($1);
-$0
